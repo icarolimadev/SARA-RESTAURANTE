@@ -1,0 +1,30 @@
+<section class="page" id="page-gerir-cardapio">
+      <div class="ph">
+        <div class="ph-left">
+          <div class="ph-eyebrow">📋 Administração</div>
+          <h1 class="ph-title">Gerir Cardápios</h1>
+          <p class="ph-sub">Cadastre e edite refeições semanais</p>
+        </div>
+        <div class="ph-right">
+          <button class="btn-primary" onclick="openModalCardapio()"><i class="fa fa-plus"></i>Nova Refeição</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3>Refeições Cadastradas</h3>
+          <div class="filter-chips">
+            <button class="chip chip-outline active" onclick="filterAdminCard('todos',this)">Todas</button>
+            <button class="chip chip-outline" onclick="filterAdminCard('cafe-manha',this)">Café Manhã</button>
+            <button class="chip chip-outline" onclick="filterAdminCard('almoco',this)">Almoço</button>
+            <button class="chip chip-outline" onclick="filterAdminCard('cafe-tarde',this)">Café Tarde</button>
+            <button class="chip chip-outline" onclick="filterAdminCard('jantar',this)">Jantar</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Dia</th><th>Tipo</th><th>Refeição</th><th>Calorias</th><th>Carb</th><th>Prot</th><th>Lip</th><th>Ações</th></tr></thead>
+            <tbody id="admin-card-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>

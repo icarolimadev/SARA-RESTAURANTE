@@ -1,0 +1,59 @@
+<!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-header">
+      <div class="sb-logo">
+        <div class="sb-logo-icon">🍽️</div>
+        <div class="sb-logo-text">
+          <span class="slt-name">GRA</span>
+          <span class="slt-ifce">GESTOR DE REFEIÇÕES ACADEMICAS</span>
+        </div>
+      </div>
+      <button class="sb-close" onclick="closeSidebar()"><i class="fa fa-times"></i></button>
+    </div>
+
+    <div class="sb-profile">
+      <img src="" alt="" class="sbp-avatar" id="sb-avatar">
+      <div class="sbp-info">
+        <div class="sbp-name" id="sb-name">antonio icaro</div>
+        <div class="sbp-role" id="sb-role">Aluno de redes de computadores</div>
+      </div>
+    </div>
+
+    <!-- NAV ALUNO -->
+    <nav class="sb-nav" id="nav-aluno">
+      <span class="sbn-section">Alimentação</span>
+      <a class="sbn-link active" onclick="goPage('dash-aluno',this)"><i class="fa fa-home"></i>Dashboard</a>
+      <a class="sbn-link" onclick="goPage('reserva-refeicoes',this)"><i class="fa fa-utensils"></i>Reservas</a>
+      <a class="sbn-link" onclick="goPage('nutricao',this)"><i class="fa fa-heartbeat"></i>Nutrição</a>
+      <span class="sbn-section">Comunidade</span>
+      <a class="sbn-link" onclick="goPage('ranking',this)"><i class="fa fa-trophy"></i>Ranking<span class="sbn-badge"></span></a>
+      <a class="sbn-link" onclick="goPage('feedback',this)"><i class="fa fa-comments"></i>Feedback</a>
+      <a class="sbn-link" onclick="goPage('votação',this)"><i class="fa fa-chart-bar"></i>Votação</a>
+      <span class="sbn-section">Transparência</span>
+      <a class="sbn-link" onclick="goPage('desperdicio-aluno',this)"><i class="fa fa-leaf"></i>Desperdício</a>
+      <a class="sbn-link" onclick="goPage('financeiro-aluno',this)"><i class="fa fa-dollar-sign"></i>Financeiro</a>
+      <span class="sbn-section">Conta</span>
+      <a class="sbn-link" onclick="goPage('perfil-aluno',this)"><i class="fa fa-user"></i>Perfil</a>
+    </nav>
+
+    <!-- NAV NUTRI -->
+    <nav class="sb-nav hidden" id="nav-nutri">
+      <span class="sbn-section">Gestão</span>
+      <a class="sbn-link active" onclick="goPage('dash-nutri',this)"><i class="fa fa-chart-line"></i>Dashboard</a>
+      <a class="sbn-link" onclick="goPage('gerir-cardapio',this)"><i class="fa fa-clipboard-list"></i>Cardápios</a>
+      <a class="sbn-link" onclick="goPage('gerenciar-tickets',this)"><i class="fa fa-ticket-alt"></i>Tickets</a>
+            <a class="sbn-link" onclick="goPage('aprova-cadastros',this)"><i class="fa fa-check-circle"></i>Aprovar Cadastros</a>
+      <a class="sbn-link" onclick="goPage('gerenciar-ranking',this)"><i class="fa fa-trophy"></i>Ranking</a>
+      <a class="sbn-link" onclick="goPage('registrar-desp',this)"><i class="fa fa-weight"></i>Desperdício</a>
+      <a class="sbn-link" onclick="goPage('financeiro-nutri',this)"><i class="fa fa-file-invoice-dollar"></i>Financeiro</a>
+      <span class="sbn-section">Análises</span>
+      <a class="sbn-link" onclick="goPage('analise',this)"><i class="fa fa-microscope"></i>Análises</a>
+      <a class="sbn-link" onclick="goPage('relatorios',this)"><i class="fa fa-file-alt"></i>Relatórios</a>
+      <span class="sbn-section">Conta</span>
+      <a class="sbn-link" onclick="goPage('perfil-nutri',this)"><i class="fa fa-user"></i>Meu Perfil</a>
+    </nav>
+
+    <button class="sb-logout" onclick="doLogout()">
+      <i class="fa fa-sign-out-alt"></i> Sair
+    </button>
+  </aside>

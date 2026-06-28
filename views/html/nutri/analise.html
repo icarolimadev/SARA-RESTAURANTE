@@ -1,0 +1,36 @@
+<section class="page" id="page-analise">
+      <div class="ph">
+        <div class="ph-left">
+          <div class="ph-eyebrow">🔬 Inteligência de Dados</div>
+          <h1 class="ph-title">Análises Avançadas</h1>
+          <p class="ph-sub">Correlações entre cardápio, desperdício e aceitação</p>
+        </div>
+      </div>
+      <div class="dash-grid-3">
+        <div class="card">
+          <div class="card-header"><h3>Pior Dia da Semana</h3></div>
+          <canvas id="chart-dia-semana" height="200"></canvas>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>Refeição × Aceitação</h3></div>
+          <canvas id="chart-ref-aceit" height="200"></canvas>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>Tendência Mensal</h3></div>
+          <canvas id="chart-tendencia" height="200"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>Análise de Alimentos — Índice de Rejeição (%)</h3></div>
+        <canvas id="chart-alimentos" height="200"></canvas>
+      </div>
+      <div class="card" style="margin-top:18px">
+        <div class="card-header"><h3>Tabela de Correlação Cardápio × Desperdício</h3></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Refeição</th><th>Servida</th><th>Rejeição Média</th><th>Classif.</th><th>Custo do Desperdício</th><th>Sugestão</th></tr></thead>
+            <tbody id="analise-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>

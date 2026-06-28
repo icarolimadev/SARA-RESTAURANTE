@@ -1,0 +1,40 @@
+<section class="page" id="page-aprova-cadastros">
+      <div class="ph">
+        <div class="ph-left">
+          <div class="ph-eyebrow">✅ Gerenciamento de Acesso</div>
+          <h1 class="ph-title">Aprovar Cadastros de Alunos</h1>
+          <p class="ph-sub">Revise e autorize novos cadastros pendentes</p>
+        </div>
+      </div>
+
+      <div class="kpi-row" id="kpi-cadastros"></div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Filtrar Cadastros</h3>
+        </div>
+        <div class="tickets-filtros">
+          <div class="filtro-grupo">
+            <input type="text" placeholder="Buscar por nome, matrícula ou email..." class="filtro-input" onkeyup="buscarCadastrosPendentes(this.value)">
+          </div>
+          <div class="filtro-grupo">
+            <label>Status:</label>
+            <div id="cadastros-filter-status" class="filter-chips">
+              <button class="chip chip-outline active" onclick="filtrarCadastros('pendente',this)">⏳ Pendentes</button>
+              <button class="chip chip-outline" onclick="filtrarCadastros('aprovado',this)">✅ Aprovados</button>
+              <button class="chip chip-outline" onclick="filtrarCadastros('recusado',this)">❌ Recusados</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h3>Cadastros para Aprovação</h3></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Nome</th><th>E-mail</th><th>Curso</th><th>Data do Cadastro</th><th>Status</th><th>Ações</th></tr></thead>
+            <tbody id="cadastros-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>

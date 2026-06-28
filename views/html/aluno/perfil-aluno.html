@@ -1,0 +1,197 @@
+<section class="page" id="page-perfil-aluno">
+      <!-- CABEÇALHO DO PERFIL -->
+      <div class="perfil-header">
+        <div class="ph-background"></div>
+        <div class="ph-content">
+          <img src="" alt="" class="ph-avatar" id="perfil-avatar">
+          <div class="ph-info">
+            <h1 class="ph-nome" id="perfil-nome">Antonio Icaro</h1>
+            <div class="ph-meta">
+              <span><i class="fa fa-id-card"></i> Matrícula: <strong id="perfil-matricula">2024001234</strong></span>
+              <span><i class="fa fa-book"></i> Curso: <strong id="perfil-curso">Redes de Computadores</strong></span>
+            </div>
+            <div class="ph-turma">
+              <span class="badge-turma" id="perfil-turma">RDC 2024</span>
+              <span class="status-aluno"><span class="status-dot"></span>Ativo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRID PRINCIPAL -->
+      <div class="perfil-grid">
+        <!-- COLUNA ESQUERDA -->
+        <div class="perfil-col-left">
+          <!-- INFORMAÇÕES PESSOAIS -->
+          <div class="card">
+            <div class="card-header"><h3><i class="fa fa-id-badge"></i> Informações Pessoais</h3></div>
+            <div class="perfil-info-grid">
+              <div class="info-item">
+                <span class="info-label">Nome Completo</span>
+                <span class="info-value" id="info-nome-completo">Antonio Icaro Silva Santos</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Matrícula</span>
+                <span class="info-value" id="info-matricula">2024001234</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Curso</span>
+                <span class="info-value" id="info-curso">Técnico em Redes de Computadores</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Turma</span>
+                <span class="info-value" id="info-turma">RDC 2024 - Período 02</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Data de Cadastro</span>
+                <span class="info-value" id="info-data-cadastro">12 de janeiro de 2024</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">E-mail Institucional</span>
+                <span class="info-value" id="info-email">antonio.icaro@aluno.ifce.edu.br</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Telefone</span>
+                <span class="info-value" id="info-telefone">(85) 98765-4321</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Idade</span>
+                <span class="info-value" id="info-idade">19 anos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RESTRIÇÕES ALIMENTARES -->
+          <div class="card" style="margin-top: 16px;">
+            <div class="card-header">
+              <h3><i class="fa fa-exclamation-triangle"></i> Restrições Alimentares</h3>
+              <button class="btn-sm-outline" onclick="editarRestricoes()" title="Editar restrições"><i class="fa fa-edit"></i></button>
+            </div>
+            <div class="restricoes-container" id="restricoes-container">
+              <div class="restricao-badge"><i class="fa fa-leaf"></i> Vegetariano</div>
+              <div class="restricao-badge restricao-intolerancia"><i class="fa fa-ban"></i> Intolerante a Lactose</div>
+              <div class="restricao-badge restricao-alergia"><i class="fa fa-allergies"></i> Alérgico a Amendoim</div>
+            </div>
+            <div class="restricao-empty" id="restricao-empty" style="display:none;">
+              <p>Nenhuma restrição alimentar registrada</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <div class="perfil-col-right">
+          <!-- ESTATÍSTICAS -->
+          <div class="card">
+            <div class="card-header"><h3><i class="fa fa-chart-bar"></i> Estatísticas</h3></div>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-icon">🍽️</span>
+                <div>
+                  <div class="stat-val" id="stat-refeicoes">32</div>
+                  <div class="stat-label">Refeições Consumidas</div>
+                </div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">📅</span>
+                <div>
+                  <div class="stat-val" id="stat-reservas">28</div>
+                  <div class="stat-label">Reservas Realizadas</div>
+                </div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">🌱</span>
+                <div>
+                  <div class="stat-val" id="stat-desperdicio">1.2kg</div>
+                  <div class="stat-label">Desperdício Evitado</div>
+                </div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">🏆</span>
+                <div>
+                  <div class="stat-val" id="stat-ranking">3º</div>
+                  <div class="stat-label">Posição no Ranking</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HISTÓRICO DE RESERVAS -->
+          <div class="card" style="margin-top: 16px;">
+            <div class="card-header">
+              <h3><i class="fa fa-history"></i> Últimas Reservas</h3>
+              <a class="link-sm" onclick="goPage('ranking',null)">Ver histórico →</a>
+            </div>
+            <div class="historico-reservas" id="historico-reservas">
+              <div class="reserva-item">
+                <div class="reserva-dot" style="background: #16a34a;"></div>
+                <div class="reserva-info">
+                  <div class="reserva-nome">Frango Grelhado ao Molho de Ervas</div>
+                  <div class="reserva-meta">Almoço • 26 de maio de 2026</div>
+                </div>
+                <span class="reserva-status">Consumida</span>
+              </div>
+              <div class="reserva-item">
+                <div class="reserva-dot" style="background: #0284c7;"></div>
+                <div class="reserva-info">
+                  <div class="reserva-nome">Mingau de Aveia com Frutas</div>
+                  <div class="reserva-meta">Café da Manhã • 25 de maio de 2026</div>
+                </div>
+                <span class="reserva-status">Consumida</span>
+              </div>
+              <div class="reserva-item">
+                <div class="reserva-dot" style="background: #f59e0b;"></div>
+                <div class="reserva-info">
+                  <div class="reserva-nome">Moqueca de Peixe</div>
+                  <div class="reserva-meta">Almoço • 24 de maio de 2026</div>
+                </div>
+                <span class="reserva-status">Consumida</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SISTEMA DE RESERVA -->
+      <div class="perfil-section-title"><i class="fa fa-calendar-check"></i> Fazer Reserva de Refeição</div>
+      <div class="card">
+        <div class="card-header"><h3>Refeições Disponíveis Hoje (28 de maio)</h3></div>
+        <div class="refeicoes-grid" id="refeicoes-grid">
+          <!-- Cards de refeição inseridos via JS -->
+        </div>
+      </div>
+
+      <!-- TICKETS GERADOS -->
+      <div class="perfil-section-title"><i class="fa fa-ticket-alt"></i> Seus Tickets Digitais</div>
+      <div class="tickets-container" id="tickets-container">
+        <!-- Tickets inseridos via JS -->
+      </div>
+
+      <!-- CONFIGURAÇÕES -->
+      <div class="perfil-section-title"><i class="fa fa-cog"></i> Configurações da Conta</div>
+      <div class="config-grid">
+        <div class="config-card">
+          <div class="config-icon">🔐</div>
+          <h4>Alterar Senha</h4>
+          <p>Atualize sua senha de acesso ao sistema</p>
+          <button class="btn-outline" onclick="abrirModalSenha()">Alterar Senha</button>
+        </div>
+        <div class="config-card">
+          <div class="config-icon">📸</div>
+          <h4>Atualizar Foto</h4>
+          <p>Troque sua foto de perfil</p>
+          <button class="btn-outline" onclick="abrirModalFoto()">Escolher Foto</button>
+        </div>
+        <div class="config-card">
+          <div class="config-icon">✏️</div>
+          <h4>Editar Perfil</h4>
+          <p>Atualize seus dados pessoais</p>
+          <button class="btn-outline" onclick="abrirModalEditar()">Editar</button>
+        </div>
+        <div class="config-card">
+          <div class="config-icon">🚪</div>
+          <h4>Sair da Conta</h4>
+          <p>Faça logout e saia do sistema</p>
+          <button class="btn-outline btn-danger" onclick="doLogout()">Sair</button>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,101 @@
+<section class="page" id="page-votação">
+      <div class="ph">
+        <div class="ph-left">
+          <div class="ph-eyebrow">📊 Participe da Votação</div>
+          <h1 class="ph-title">Votação dos alunos </h1>
+          <p class="ph-sub">Ajude a tomar a melhor decisão</p>
+        </div>
+      </div>
+
+      <div class="votacao-container" id="votacao-container">
+        <!-- Sistema de votação inserido via JS -->
+      </div>
+      <!-- Canvas de partículas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Blobs decorativos de fundo -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <!-- Container principal -->
+  <div class="dev-screen">
+
+  
+
+    <!-- Card central glassmorphism -->
+    <main class="dev-main">
+
+      <div class="dev-card">
+
+        <!-- Ícone animado -->
+        <div class="dev-icon-wrap">
+          <div class="dev-icon-ring ring-outer"></div>
+          <div class="dev-icon-ring ring-middle"></div>
+          <div class="dev-icon-core">
+            <i class="fa fa-code" id="dev-icon-main"></i>
+          </div>
+        </div>
+
+        <!-- Badge de status -->
+        <div class="dev-status-badge">
+          <span class="dev-dot"></span>
+          Em construção
+        </div>
+
+        <!-- Título e subtítulo (injetados via JS) -->
+        <h1 class="dev-title" id="dev-title">Área em Desenvolvimento</h1>
+        <p class="dev-desc" id="dev-desc">
+          Nossa equipe está trabalhando com dedicação para entregar esta funcionalidade
+          com a melhor experiência possível.
+        </p>
+
+        <!-- Barra de progresso animada -->
+        <div class="dev-progress-wrap">
+          <div class="dev-progress-labels">
+            <span>Progresso de desenvolvimento</span>
+            <span class="dev-progress-pct" id="progress-pct">68%</span>
+          </div>
+          <div class="dev-progress-track">
+            <div class="dev-progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <!-- Etapas -->
+        <div class="dev-steps" id="dev-steps">
+          <div class="dev-step done">
+            <span class="step-icon"><i class="fa fa-check"></i></span>
+            <span class="step-label">Protótipo de UI</span>
+          </div>
+          <div class="dev-step done">
+            <span class="step-icon"><i class="fa fa-check"></i></span>
+            <span class="step-label">Estrutura de dados</span>
+          </div>
+          <div class="dev-step active">
+            <span class="step-icon"><i class="fa fa-spinner fa-spin"></i></span>
+            <span class="step-label">Integração backend</span>
+          </div>
+          <div class="dev-step pending">
+            <span class="step-icon"><i class="fa fa-clock"></i></span>
+            <span class="step-label">Testes e validação</span>
+          </div>
+        </div>
+
+        <!-- Previsão -->
+        <div class="dev-eta">
+          <i class="fa fa-calendar-alt"></i>
+          Previsão de lançamento: <strong>Julho 2026</strong>
+        </div>
+
+        <!-- Botão voltar -->
+        <button class="dev-back-btn" id="dev-back-btn" onclick="history.back()">
+          <i class="fa fa-arrow-left"></i>
+          Voltar para o sistema
+        </button>
+
+      </div>
+
+    </main>
+
+  </div>
+    </section>

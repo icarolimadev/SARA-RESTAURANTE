@@ -1,0 +1,299 @@
+<!-- Modal Cardápio -->
+<div class="modal-overlay" id="modal-cardapio" onclick="closeModalById('modal-cardapio',event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-hd">
+      <h2 id="modal-card-title">Nova Refeição</h2>
+      <button class="modal-x" onclick="closeModalById('modal-cardapio')"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="modal-bd">
+      <div class="form-row-2">
+        <div class="fg"><label>Dia da Semana</label>
+          <select id="mc-dia" class="fi">
+            <option>Segunda-feira</option><option>Terça-feira</option><option>Quarta-feira</option>
+            <option>Quinta-feira</option><option>Sexta-feira</option>
+          </select>
+        </div>
+        <div class="fg"><label>Tipo</label>
+          <select id="mc-tipo" class="fi">
+            <option value="cafe-manha">☀️ Café da Manhã</option>
+            <option value="almoco">🍽️ Almoço</option>
+            <option value="cafe-tarde">🍵 Café da Tarde</option>
+            <option value="jantar">🌙 Jantar</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg"><label>Nome da Refeição</label><input type="text" id="mc-nome" class="fi" placeholder="Ex: Frango grelhado ao molho de ervas"></div>
+      <div class="fg"><label>Acompanhamentos</label><input type="text" id="mc-acomp" class="fi" placeholder="Ex: Arroz, feijão, salada verde"></div>
+      <div class="form-row-2">
+        <div class="fg"><label>Calorias (kcal)</label><input type="number" id="mc-cal" class="fi" placeholder="650" oninput="calcMacros()"></div>
+        <div class="fg"><label>Carboidratos (g)</label><input type="number" id="mc-carb" class="fi" placeholder="75" oninput="calcMacros()"></div>
+      </div>
+      <div class="form-row-2">
+        <div class="fg"><label>Proteínas (g)</label><input type="number" id="mc-prot" class="fi" placeholder="38" oninput="calcMacros()"></div>
+        <div class="fg"><label>Lipídeos (g)</label><input type="number" id="mc-lip" class="fi" placeholder="18" oninput="calcMacros()"></div>
+      </div>
+      <div class="macros-preview" id="macros-preview" style="display:none">
+        <div class="mp-item"><span id="mp-carb-pct">—</span><small>% Carb</small></div>
+        <div class="mp-item"><span id="mp-prot-pct">—</span><small>% Prot</small></div>
+        <div class="mp-item"><span id="mp-lip-pct">—</span><small>% Lip</small></div>
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-secondary" onclick="closeModalById('modal-cardapio')">Cancelar</button>
+      <button class="btn-primary" onclick="salvarCardapio()"><i class="fa fa-check"></i>Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Financeiro -->
+<div class="modal-overlay" id="modal-financeiro" onclick="closeModalById('modal-financeiro',event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-hd">
+      <h2>Registro Financeiro</h2>
+      <button class="modal-x" onclick="closeModalById('modal-financeiro')"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="modal-bd">
+      <div class="form-row-2">
+        <div class="fg"><label>Semana</label><input type="text" id="mf-semana" class="fi" placeholder="Ex: Sem. 18/2026"></div>
+        <div class="fg"><label>Refeições no Período</label><input type="number" id="mf-ref" class="fi" placeholder="Ex: 10"></div>
+      </div>
+      <div class="form-row-2">
+        <div class="fg"><label>Valor Total (R$)</label><input type="number" id="mf-total" step="0.01" class="fi" placeholder="Ex: 14500.00"></div>
+        <div class="fg"><label>Valor Perdido (R$)</label><input type="number" id="mf-perdido" step="0.01" class="fi" placeholder="Ex: 1200.00"></div>
+      </div>
+      <div class="fg"><label>Total de Alunos Servidos</label><input type="number" id="mf-alunos" class="fi" placeholder="Ex: 1500"></div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-secondary" onclick="closeModalById('modal-financeiro')">Cancelar</button>
+      <button class="btn-primary" onclick="salvarFinanceiro()"><i class="fa fa-check"></i>Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ticket (Aluno) -->
+<div class="modal-overlay" id="modal-ticket" onclick="closeModalById('modal-ticket',event)">
+  <div class="modal-box modal-ticket-box" onclick="event.stopPropagation()">
+    <div class="modal-hd">
+      <h2>🎫 Seu Ticket Digital</h2>
+      <button class="modal-x" onclick="closeModalById('modal-ticket')"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="modal-bd">
+      <div class="ticket-display">
+        <div class="ticket-code-section">
+          <label>CÓDIGO DO TICKET</label>
+          <div class="ticket-code" id="mt-codigo">TKT2026052901ABC123</div>
+          <small>Use este código na entrega da refeição</small>
+        </div>
+        <div class="ticket-info-grid">
+          <div class="ti-item">
+            <span class="ti-label">Aluno</span>
+            <span class="ti-value" id="mt-aluno">-</span>
+          </div>
+          <div class="ti-item">
+            <span class="ti-label">Matrícula</span>
+            <span class="ti-value" id="mt-matricula">-</span>
+          </div>
+          <div class="ti-item">
+            <span class="ti-label">Turma</span>
+            <span class="ti-value" id="mt-turma">-</span>
+          </div>
+          <div class="ti-item">
+            <span class="ti-label">Curso</span>
+            <span class="ti-value" id="mt-curso">-</span>
+          </div>
+          <div class="ti-item">
+            <span class="ti-label">Data</span>
+            <span class="ti-value" id="mt-data">-</span>
+          </div>
+          <div class="ti-item">
+            <span class="ti-label">Horário</span>
+            <span class="ti-value" id="mt-horario">-</span>
+          </div>
+          <div class="ti-item ti-full">
+            <span class="ti-label">Refeição</span>
+            <span class="ti-value" id="mt-refeicao">-</span>
+          </div>
+          <div class="ti-item ti-full">
+            <span class="ti-label">Status</span>
+            <span class="ti-value" id="mt-status">✅ Confirmado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-secondary" onclick="closeModalById('modal-ticket')">Fechar</button>
+      <button class="btn-primary" onclick="copiarCodigoTicket(document.getElementById('mt-codigo').textContent)">
+        <i class="fa fa-copy"></i> Copiar Código
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Modal Perfil Aluno (Nutricionista) -->
+<div class="modal-overlay" id="modal-perfil-aluno-nutri" onclick="closeModalById('modal-perfil-aluno-nutri',event)">
+  <div class="modal-box modal-perfil-box" onclick="event.stopPropagation()">
+    <div class="modal-hd">
+      <h2>👤 Perfil do Aluno</h2>
+      <button class="modal-x" onclick="closeModalById('modal-perfil-aluno-nutri')"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="modal-bd">
+      <div class="perfil-info-modal">
+        <div class="pim-section">
+          <h3>Informações Pessoais</h3>
+          <div class="pim-grid">
+            <div class="pim-item">
+              <span class="pim-label">Nome</span>
+              <span class="pim-value" id="mpan-nome">-</span>
+            </div>
+            <div class="pim-item">
+              <span class="pim-label">Matrícula</span>
+              <span class="pim-value" id="mpan-matricula">-</span>
+            </div>
+            <div class="pim-item">
+              <span class="pim-label">Turma</span>
+              <span class="pim-value" id="mpan-turma">-</span>
+            </div>
+            <div class="pim-item">
+              <span class="pim-label">Curso</span>
+              <span class="pim-value" id="mpan-curso">-</span>
+            </div>
+          </div>
+        </div>
+        <div class="pim-section">
+          <h3>Estatísticas de Frequência</h3>
+          <div class="pim-grid">
+            <div class="pim-item">
+              <span class="pim-label">Total de Reservas</span>
+              <span class="pim-value" id="mpan-reservas">-</span>
+            </div>
+            <div class="pim-item">
+              <span class="pim-label">Presenças</span>
+              <span class="pim-value" id="mpan-presencas">-</span>
+            </div>
+            <div class="pim-item">
+              <span class="pim-label">Faltas</span>
+              <span class="pim-value" id="mpan-faltas">-</span>
+            </div>
+            <div class="pim-item">
+              <span class="pim-label">Frequência</span>
+              <span class="pim-value" id="mpan-frequencia">-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-secondary" onclick="closeModalById('modal-perfil-aluno-nutri')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal Cadastro -->
+<div class="modal-overlay" id="modal-revisar-cadastro" onclick="closeModalById('modal-revisar-cadastro',event)">
+  <div class="modal-box modal-perfil-box" onclick="event.stopPropagation()">
+    <div class="modal-hd">
+      <h2>📋 Revisar Cadastro de Aluno</h2>
+      <button class="modal-x" onclick="closeModalById('modal-revisar-cadastro')"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="modal-bd">
+      <div class="perfil-info-modal">
+        <div class="pim-section">
+          <h3>Dados Pessoais</h3>
+          <div class="pim-grid">
+            <div class="pim-item">
+              <span class="pim-label">Nome Completo</span>
+              <span class="pim-value" id="mrc-nome">-</span>
+            </div>
+            <div class="pim-item">
+              <span class="pim-label">E-mail</span>
+              <span class="pim-value" id="mrc-email">-</span>
+            </div>
+            <div class="pim-item">
+              <span class="pim-label">Matrícula</span>
+              <span class="pim-value" id="mrc-matricula">-</span>
+            </div>
+            <div class="pim-item">
+              <span class="pim-label">Telefone</span>
+              <span class="pim-value" id="mrc-telefone">-</span>
+            </div>
+            <div class="pim-item pim-full">
+              <span class="pim-label">Curso</span>
+              <span class="pim-value" id="mrc-curso">-</span>
+            </div>
+            <div class="pim-item pim-full">
+              <span class="pim-label">Data do Cadastro</span>
+              <span class="pim-value" id="mrc-data-cadastro">-</span>
+            </div>
+          </div>
+        </div>
+        <div class="pim-section">
+          <h3>Restrições Alimentares</h3>
+          <div id="mrc-restricoes">
+            <span style="color: var(--text3);">Nenhuma restrição informada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-danger" onclick="recusarCadastro(state.cadastroEmRevisao)">
+        <i class="fa fa-times"></i> Recusar
+      </button>
+      <button class="btn-primary" onclick="aprovarCadastro(state.cadastroEmRevisao)">
+        <i class="fa fa-check"></i> Aprovar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Editar Ranking -->
+<div class="modal-overlay" id="modal-editar-ranking" onclick="closeModalById('modal-editar-ranking',event)">
+  <div class="modal-box modal-perfil-box" onclick="event.stopPropagation()">
+    <div class="modal-hd">
+      <h2>🏆 Editar Posição no Ranking</h2>
+      <button class="modal-x" onclick="closeModalById('modal-editar-ranking')"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="modal-bd">
+      <div class="form-stack">
+        <div class="fg">
+          <label>Turma</label>
+          <input type="text" id="mer-turma" class="fi" placeholder="Ex: RDC 2024" disabled style="background: var(--bg);">
+        </div>
+        <div class="form-row-2">
+          <div class="fg">
+            <label>Posição Anterior</label>
+            <input type="text" id="mer-pos-ant" class="fi" placeholder="-" disabled style="background: var(--bg);">
+          </div>
+          <div class="fg">
+            <label>Nova Posição</label>
+            <input type="number" id="mer-pos-nova" class="fi" placeholder="Ex: 2" min="1">
+          </div>
+        </div>
+        <div class="fg">
+          <label>Índice de Rejeição (%)</label>
+          <input type="number" id="mer-ri" class="fi" placeholder="Ex: 2.5" step="0.1">
+        </div>
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-secondary" onclick="closeModalById('modal-editar-ranking')">Cancelar</button>
+      <button class="btn-primary" onclick="salvarAlteracaoRanking()">
+        <i class="fa fa-save"></i> Salvar Alteração
+      </button>
+    </div>
+  </div>
+</div>

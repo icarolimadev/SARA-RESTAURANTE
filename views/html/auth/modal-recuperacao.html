@@ -1,0 +1,75 @@
+<!-- ══ modal de recuperaçao de conta  ══ -->
+
+
+
+
+<div class="overlay" id="overlay-recuperacao" onclick="handleOverlayClickrec(event)">
+    <div class="modal" id="modalrecuperacao" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+      <!-- HEADER -->
+      <div class="modal-header">
+        <div class="modal-brand">
+          <div class="modal-brand-logo">CL</div>
+          <div class="modal-brand-name">Campus<span>Link</span></div>
+        </div>
+        <button class="close-btn" onclick="closeModalrecuperacao()" title="Fechar">
+          <i class="fa fa-times"></i>
+        </button>
+
+        <h2 class="modal-title" id="modal-title">Recuperar senha</h2>
+        <p class="modal-sub">
+          Insira seu email institucional para receber as instruções de recuperação de senha.
+        </p>
+      </div>
+
+      <!-- BODY -->
+      <div class="modal-body" id="modal-body-recuperacao">
+
+        <!-- Email Institucional -->
+        <div class="form-group">
+          <label class="form-label" for="recuperar-email">Email Institucional</label>
+          <div class="input-wrap">
+            <input
+              class="form-input" id="recuperar-email" type="email"
+              placeholder=" seu.email@aluno.ifce.edu.br" />
+          </div>
+          <span class="err-msg" id="recuperar-email-err"></span>
+        </div>
+      
+<div class="btn-row">
+          <button class="btn-next-recuperacao" id="btn-next-recuperacao" onclick="enviarRecuperacao()">
+            <span class="btn-label">
+              Enviar Instruções <i class="fa fa-arrow-right"></i>
+            </span>
+          </button>
+        </div>
+
+      <!--  botões de navegação -->
+      <div class="modal-footer" id="modal-footerrecuperacao">
+      
+        <div class="divider">ou</div>
+        <p class="login-link">
+          Lembrou sua senha?
+          <a href="#" onclick="closeModalrecuperacao()">Faça login</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ TELA DE SUCESSO ═══ -->
+        <div class="success-view" id="success-view-recuperacao">
+          <div class="success-icon"><i class="fa fa-check"></i></div>
+          <h3 class="success-title">Instruções enviadas com sucesso!</h3>
+          <p class="success-msg">
+            Enviamos para seu e-mail institucional as instruções necessárias para a recuperação de senha.
+Verifique sua caixa de entrada e, caso não encontre a mensagem, consulte também a pasta de spam ou lixo eletrônico.
+          </p>
+          <button class="btn-next-recuperacao" style="width:100%;justify-content:center"
+            onclick="closeModalrecuperacao()">
+            <span class="btn-label">
+              <i class="fa fa-arrow-right"></i> fazer login
+            </span> 
+          </button>
+        </div>
+</div>

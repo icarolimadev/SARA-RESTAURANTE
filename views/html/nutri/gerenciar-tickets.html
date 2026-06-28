@@ -1,0 +1,45 @@
+<section class="page" id="page-gerenciar-tickets">
+      <div class="ph">
+        <div class="ph-left">
+          <div class="ph-eyebrow">🎫 Controle de Refeições</div>
+          <h1 class="ph-title">Gerenciar Tickets</h1>
+          <p class="ph-sub">Visualize e confirme a entrega de refeições reservadas</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Buscar e Filtrar Tickets</h3>
+        </div>
+        <div class="tickets-filtros">
+          <div class="filtro-grupo">
+            <input type="text" placeholder="Buscar por nome ou código..." class="filtro-input" onkeyup="buscarTickets(this.value)">
+          </div>
+          <div class="filtro-grupo">
+            <label>Status:</label>
+            <div id="tickets-filter-status" class="filter-chips">
+              <button class="chip chip-outline active" onclick="filtrarTicketsNutri('todos',this)">Todos</button>
+              <button class="chip chip-outline" onclick="filtrarTicketsNutri('confirmado',this)">✅ Confirmado</button>
+              <button class="chip chip-outline" onclick="filtrarTicketsNutri('utilizado',this)">🎯 Utilizado</button>
+              <button class="chip chip-outline" onclick="filtrarTicketsNutri('cancelado',this)">❌ Cancelado</button>
+            </div>
+          </div>
+          <div class="filtro-grupo">
+            <label>Turma:</label>
+            <div id="tickets-filter-turma" class="filter-chips">
+              <button class="chip chip-outline active" onclick="filtrarTicketsTurma('todas',this)">Todas</button>
+              <button class="chip chip-outline" onclick="filtrarTicketsTurma('RDC 2024',this)">RDC 2024</button>
+              <button class="chip chip-outline" onclick="filtrarTicketsTurma('TI 2024',this)">TI 2024</button>
+              <button class="chip chip-outline" onclick="filtrarTicketsTurma('EC 2024',this)">EC 2024</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h3>Tickets de Refeição</h3></div>
+        <div class="tickets-nutri-list" id="tickets-nutri-list">
+          <!-- Tickets inseridos via JS -->
+        </div>
+      </div>
+    </section>

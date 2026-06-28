@@ -1,0 +1,57 @@
+<section class="page" id="page-registrar-desp">
+      <div class="ph">
+        <div class="ph-left">
+          <div class="ph-eyebrow">⚖️ Controle de Desperdício</div>
+          <h1 class="ph-title">Registrar Desperdício</h1>
+          <p class="ph-sub">Insira os dados coletados após cada refeição</p>
+        </div>
+      </div>
+
+      <div class="dash-grid-2">
+        <div class="card">
+          <h3 class="form-card-title">Novo Registro</h3>
+          <div class="form-stack">
+            <div class="form-row-2">
+              <div class="fg"><label>Data</label><input type="date" id="rd-data" class="fi"></div>
+              <div class="fg"><label>Tipo de Refeição</label>
+                <select id="rd-tipo" class="fi">
+                  <option value="cafe-manha">☀️ Café da Manhã</option>
+                  <option value="almoco" selected>🍽️ Almoço</option>
+                  <option value="cafe-tarde">🍵 Café da Tarde</option>
+                  <option value="jantar">🌙 Jantar</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row-2">
+              <div class="fg"><label>Alunos Servidos</label><input type="number" id="rd-alunos" class="fi" placeholder="Ex: 320"></div>
+              <div class="fg"><label>Total Distribuído (kg)</label><input type="number" id="rd-distribuido" step="0.01" class="fi" placeholder="Ex: 224.0"></div>
+            </div>
+            <div class="form-row-2">
+              <div class="fg"><label>Rejeito Total (kg)</label><input type="number" id="rd-rejeito" step="0.01" class="fi" placeholder="Ex: 12.5" oninput="calcularDesp()"></div>
+              <div class="fg"><label>Valor da Refeição (R$)</label><input type="number" id="rd-valor" step="0.01" class="fi" placeholder="Ex: 1450.00"></div>
+            </div>
+            <button class="btn-primary w-full" onclick="salvarDesp()"><i class="fa fa-save"></i>Salvar Registro</button>
+          </div>
+        </div>
+
+        <div class="card" id="calc-preview">
+          <h3 class="form-card-title">Cálculo Automático</h3>
+          <div class="calc-display" id="calc-display">
+            <div class="calc-empty">
+              <span>⚖️</span>
+              <p>Preencha os dados ao lado para ver os cálculos automáticos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h3>Registros Recentes</h3></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Data</th><th>Tipo</th><th>Alunos</th><th>Distribuído</th><th>Rejeito</th><th>Resto Ingestão</th><th>Aceitação</th><th>Valor Perdido</th><th>Famílias</th><th>Ações</th></tr></thead>
+            <tbody id="desp-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>

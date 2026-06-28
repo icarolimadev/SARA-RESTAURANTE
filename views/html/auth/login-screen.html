@@ -1,0 +1,122 @@
+<!-- ═══ LOGIN SCREEN ═══ -->
+<div id="login-screen">
+  <main class="container">
+
+    <!-- LADO ESQUERDO — hero verde -->
+    <section class="hero">
+      <div class="grid"></div>
+      <div class="hero-content">
+
+        <div class="hero-icon-wrap">
+          <div class="hero-icon">
+            <i class="fa fa-utensils"></i>
+          </div>
+        </div>
+
+        <h1>
+          Gestão de<br>
+          Refeições<br>
+          Acadêmicas
+        </h1>
+
+        <p>
+          Sistema institucional completo para controle nutricional,
+          cardápios e bem-estar alimentar dos alunos do IFCE.
+        </p>
+
+        <ul class="hero-features">
+          <li>
+            <span class="feat-icon feat-blue"><i class="fa fa-chart-bar"></i></span>
+            Monitoramento de desperdício em tempo real
+          </li>
+          <li>
+            <span class="feat-icon feat-green"><i class="fa fa-utensils"></i></span>
+            Cardápios nutricionais completos por refeição
+          </li>
+          <li>
+            <span class="feat-icon feat-red"><i class="fa fa-qrcode"></i></span>
+            Reserva inteligente com ticket digital e QR Code
+          </li>
+          <li>
+            <span class="feat-icon feat-gold"><i class="fa fa-trophy"></i></span>
+            Ranking de turmas e conscientização financeira
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- LADO DIREITO — login branco -->
+    <section class="login">
+      <div class="login-box">
+
+        <!-- Logo -->
+        <div class="login-logo">
+          <div class="login-logo-icon">
+            <i class="fa fa-utensils"></i>
+          </div>
+          <div class="login-logo-text">
+            <span class="llg-name">GRA</span>
+            <span class="llg-sub">IFCE · SISTEMA ACADÊMICO</span>
+          </div>
+        </div>
+
+        <!-- Boas-vindas -->
+        <div class="login-welcome">
+          <h2>Bem-vindo de volta! </h2>
+          <p>Entre com suas credenciais institucionais.</p>
+        </div>
+
+        <!-- Formulário -->
+        <div class="login-form">
+
+          <div class="lf-group">
+            <label>E-mail Institucional</label>
+            <input type="email" id="login-email" placeholder="ex: antonio.soares08@aluno.ifce.edu.br" value="antonio.soares08@aluno.ifce.edu.br">
+          </div>
+
+          <div class="lf-group">
+            <label>Senha</label>
+            <div class="lf-pass-wrap">
+              <input type="password" id="login-pass" value="12345678">
+              <button class="lf-eye" onclick="togglePass()" type="button">
+                <i class="fa fa-eye" id="eye-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="lf-row">
+            <label class="lf-check">
+              <input type="checkbox"> Lembrar de mim
+            </label>
+            <a class="lf-forgot" href="#">Esqueci a senha</a>
+          </div>
+
+          <button class="btn-login" onclick="doLogin()">Entrar no Sistema</button>
+
+          <!-- Divisor -->
+          <div class="lf-divider">
+            <span>SELECIONE SEU CARGO DE ACESSO</span>
+          </div>
+
+          <!-- Botões rápidos -->
+          <div class="lf-quick">
+            <button class="lf-quick-btn" onclick="quickLogin('nutri')">
+              <span>👩‍⚕️</span> Nutricionista
+            </button>
+            <button class="lf-quick-btn" onclick="quickLogin('aluno')">
+              <span>🎓</span> Aluno
+            </button>
+          </div>
+
+          <!-- Cadastro -->
+          <div class="lf-register">
+            Primeiro acesso? <a href="#">Cadastre-se aqui</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>

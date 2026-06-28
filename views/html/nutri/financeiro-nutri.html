@@ -1,0 +1,32 @@
+<section class="page" id="page-financeiro-nutri">
+      <div class="ph">
+        <div class="ph-left">
+          <div class="ph-eyebrow">💼 Gestão Financeira</div>
+          <h1 class="ph-title">Transparência Financeira</h1>
+          <p class="ph-sub">Controle de custos e perdas financeiras</p>
+        </div>
+        <div class="ph-right">
+          <button class="btn-primary" onclick="openModalFinanceiro()"><i class="fa fa-plus"></i>Novo Registro</button>
+        </div>
+      </div>
+      <div class="kpi-row" id="kpi-fin-nutri"></div>
+      <div class="dash-grid-2">
+        <div class="card">
+          <div class="card-header"><h3>Valor Total vs. Perdido (R$)</h3></div>
+          <canvas id="chart-fin-nutri" height="220"></canvas>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>% Perda Financeira por Semana</h3></div>
+          <canvas id="chart-fin-pct" height="220"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>Histórico Financeiro Completo</h3></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Semana</th><th>Refeições</th><th>Valor Total</th><th>Valor Perdido</th><th>Custo/Aluno</th><th>Economia Possível</th><th>% Perda</th></tr></thead>
+            <tbody id="fin-nutri-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>

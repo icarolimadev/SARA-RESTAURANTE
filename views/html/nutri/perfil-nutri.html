@@ -1,0 +1,163 @@
+<section class="page" id="page-perfil-nutri">
+      <!-- CABEÇALHO DO PERFIL -->
+      <div class="perfil-header">
+        <div class="ph-background"></div>
+        <div class="ph-content">
+          <img src="" alt="" class="ph-avatar" id="perfil-avatar">
+          <div class="ph-info">
+            <h1 class="ph-nome" id="perfil-nome">jessica de lima </h1>
+            <div class="ph-meta">
+              <span><i class="fa fa-id-card"></i> Matrícula SIAPE: <strong id="perfil-matricula">2024001234</strong></span>
+              <span><i class="fa fa-book"></i> CARGO: <strong id="perfil-curso">Nutricionista</strong></span>
+            </div>
+            <div class="ph-turma">
+              <span class="badge-turma" id="perfil-campus">boa viagem </span>
+              <span class="status-aluno"><span class="status-dot"></span>Ativo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRID PRINCIPAL -->
+      <div class="perfil-grid">
+        <!-- COLUNA ESQUERDA -->
+        <div class="perfil-col-left">
+          <!-- INFORMAÇÕES PESSOAIS -->
+          <div class="card">
+            <div class="card-header"><h3><i class="fa fa-id-badge"></i> Informações Pessoais</h3></div>
+            <div class="perfil-info-grid">
+              <div class="info-item">
+                <span class="info-label">Nome Completo</span>
+                <span class="info-value" id="info-nome-completo">jessica de lima </span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Matrícula SIAPE</span>
+                <span class="info-value" id="info-matricula-SIAPE">123456789</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Cargo</span>
+                <span class="info-value" id="info-cargo">Nutricionista</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">campus</span>
+                <span class="info-value" id="info-campus">IFCE - Campus boa viagem</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Data de ingresso</span>
+                <span class="info-value" id="info-data-ingresso">12 de janeiro de 2024</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">E-mail Institucional</span>
+                <span class="info-value" id="info-email">antonio.icaro@aluno.ifce.edu.br</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Telefone</span>
+                <span class="info-value" id="info-telefone">(85) 98765-4321</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Idade</span>
+                <span class="info-value" id="info-idade">19 anos</span>
+              </div>
+            </div>
+          </div>
+
+            <!-- METAS DO MES 1-->                    
+            <div class="card" style="margin-top: 16px;">
+            <div class="card-header">
+              <h3><i class="fa fa-exclamation-triangle"></i> Educação alimentar</h3>
+              <button class="btn-sm-outline" onclick="editarRestricoes()" title="Editar restrições"><i class="fa fa-edit"></i></button>
+            </div>
+            <div class="restricoes-container" id="restricoes-container">
+              <div class="restricao-badge"><i class="ti ti-bulb"></i> Campanha "peguei, como tudo"</div>
+              <div class="restricao-badge restricao-intolerancia"><i class="fa fa-ban"></i> Painel com dados de desperdício do mês</div>
+              <div class="restricao-badge restricao-alergia"><i class="fa fa-allergies"></i> Gamificação por turma menos desperdiçadora</div>
+            </div>
+            <div class="restricao-empty" id="restricao-empty" style="display:none;">
+              <p>Nenhuma restrição alimentar registrada</p>
+            </div>
+          </div>
+
+          <!-- METAS DO MES 2-->
+            <div class="card" style="margin-top: 16px;">
+            <div class="card-header">
+              <h3><i class="fa fa-exclamation-triangle"></i> Restrições Alimentares</h3>
+              <button class="btn-sm-outline" onclick="editarRestricoes()" title="Editar restrições"><i class="fa fa-edit"></i></button>
+            </div>
+            <div class="restricoes-container" id="restricoes-container">
+              <div class="restricao-badge"><i class="fa fa-leaf"></i> Vegetariano</div>
+              <div class="restricao-badge restricao-intolerancia"><i class="fa fa-ban"></i> Intolerante a Lactose</div>
+              <div class="restricao-badge restricao-alergia"><i class="fa fa-allergies"></i> Gamificação por turma menos desperdiçadora</div>
+            </div>
+            <div class="restricao-empty" id="restricao-empty" style="display:none;">
+              <p>Nenhuma restrição alimentar registrada</p>
+            </div>
+          </div>
+
+          <!-- METAS DO MES 3-->
+            <div class="card" style="margin-top: 16px;">
+            <div class="card-header">
+              <h3><i class="fa fa-exclamation-triangle"></i> Restrições Alimentares</h3>
+              <button class="btn-sm-outline" onclick="editarRestricoes()" title="Editar restrições"><i class="fa fa-edit"></i></button>
+            </div>
+            <div class="restricoes-container" id="restricoes-container">
+              <div class="restricao-badge"><i class="fa fa-leaf"></i> Vegetariano</div>
+              <div class="restricao-badge restricao-intolerancia"><i class="fa fa-ban"></i> Intolerante a Lactose</div>
+              <div class="restricao-badge restricao-alergia"><i class="fa fa-allergies"></i> Alérgico a Amendoim</div>
+            </div>
+            <div class="restricao-empty" id="restricao-empty" style="display:none;">
+              <p>Nenhuma restrição alimentar registrada</p>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+      
+
+
+
+
+
+
+        
+
+        <!-- COLUNA DIREITA -->
+        <div class="perfil-col-right">
+         
+
+      <!-- CONFIGURAÇÕES -->
+      <div class="perfil-section-title"><i class="fa fa-cog"></i> Configurações da Conta</div>
+      <div class="config-grid">
+        <div class="config-card">
+          <div class="config-icon">🔐</div>
+          <h4>Alterar Senha</h4>
+          <p>Atualize sua senha de acesso ao sistema</p>
+          <button class="btn-outline" onclick="abrirModalSenha()">Alterar Senha</button>
+        </div>
+        <div class="config-card">
+          <div class="config-icon">📸</div>
+          <h4>Atualizar Foto</h4>
+          <p>Troque sua foto de perfil</p>
+          <button class="btn-outline" onclick="abrirModalFoto()">Escolher Foto</button>
+        </div>
+        <div class="config-card">
+          <div class="config-icon">✏️</div>
+          <h4>Editar Perfil</h4>
+          <p>Atualize seus dados pessoais</p>
+          <button class="btn-outline" onclick="abrirModalEditar()">Editar</button>
+        </div>
+        <div class="config-card">
+          <div class="config-icon">🚪</div>
+          <h4>Sair da Conta</h4>
+          <p>Faça logout e saia do sistema</p>
+          <button class="btn-outline btn-danger" onclick="doLogout()">Sair</button>
+        </div>
+      </div>
+    </section>

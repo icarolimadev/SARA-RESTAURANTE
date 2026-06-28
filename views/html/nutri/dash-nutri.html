@@ -1,0 +1,36 @@
+<section class="page" id="page-dash-nutri">
+      <div class="ph">
+        <div class="ph-left">
+          <div class="ph-eyebrow">📊 Visão Geral · Nutrição</div>
+          <h1 class="ph-title">Dashboard Administrativo</h1>
+          <p class="ph-sub" id="nutri-date"></p>
+        </div>
+        <div class="ph-right">
+          <button class="btn-primary" onclick="goPage('gerir-cardapio',null)"><i class="fa fa-plus"></i>Novo Cardápio</button>
+        </div>
+      </div>
+
+      <div class="kpi-row" id="kpi-nutri-admin"></div>
+
+      <div class="dash-grid-3">
+        <div class="card card-col2">
+          <div class="card-header"><h3>Desperdício Mensal (kg)</h3></div>
+          <canvas id="chart-nutri-mensal" height="200"></canvas>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>Aceitação por Tipo</h3></div>
+          <canvas id="chart-nutri-tipo" height="200"></canvas>
+        </div>
+      </div>
+
+      <div class="dash-grid-2">
+        <div class="card">
+          <div class="card-header"><h3>Top 5 — Maior Rejeição</h3></div>
+          <div id="top-rejeicao"></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>Alertas do Sistema</h3></div>
+          <div id="alertas-admin"></div>
+        </div>
+      </div>
+    </section>
